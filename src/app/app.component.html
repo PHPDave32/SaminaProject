@@ -1,0 +1,17 @@
+<mat-drawer-container>
+  <mat-drawer *ngIf="currentRoute !== '/accueil' && currentRoute !== '/register'" mode="side" [opened]="sideBarOpen">
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <ng-container *ngIf="currentRoute !== '/accueil' && currentRoute !== '/register'">
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+      <router-outlet (activate)="onActivate($event)"></router-outlet>
+    </ng-container>
+    <ng-container *ngIf="currentRoute === '/accueil'">
+      <app-login></app-login>
+    </ng-container>
+    <ng-container *ngIf="currentRoute === '/register'">
+      <app-register></app-register>
+    </ng-container>
+  </mat-drawer-content>
+</mat-drawer-container>
