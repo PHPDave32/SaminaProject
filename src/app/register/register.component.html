@@ -10,46 +10,50 @@
 						INSCRIPTION
 					</span>
 
-
         <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-          <input class="input100" type="text" name="email">
-          <span class="focus-input100"></span>
-          <span class="label-input100">Email</span>
-        </div>
-
-        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-          <input class="input100" type="text" name="email">
+          <input class="input100" type="text" [(ngModel)]="nom" name="nom">
           <span class="focus-input100"></span>
           <span class="label-input100">Nom</span>
         </div>
 
-
         <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-          <input class="input100" type="text" name="email">
+          <input class="input100" type="text" [(ngModel)]="prenom" name="prenom">
           <span class="focus-input100"></span>
           <span class="label-input100">prénom</span>
         </div>
 
-        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-          <select class="input100" name="role">
-            <option value="" disabled selected hidden>Choississez votre rôle</option>
-            <option value="admin">Commercial</option>
-            <option value="user">Administratif</option>
-          </select>
+        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+          <input class="input100" type="text" [(ngModel)]="email" name="email">
           <span class="focus-input100"></span>
-          <span class="label-input100">Role</span>
+          <span class="label-input100">Email</span>
         </div>
+
+<!--        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">-->
+<!--          <select class="input100" name="role">-->
+<!--            <option value="" disabled selected hidden>Choississez votre rôle</option>-->
+<!--            <option value="admin" selected>Commercial</option>-->
+<!--            <option value="user">Administratif</option>-->
+<!--          </select>-->
+<!--          <span class="focus-input100"></span>-->
+<!--          <span class="label-input100">Role</span>-->
+<!--        </div>-->
 
 
         <div class="wrap-input100 validate-input" data-validate="Password is required">
-          <input class="input100" type="password" name="pass">
+          <input class="input100" type="password" [(ngModel)]="password" name="pass">
           <span class="focus-input100"></span>
           <span class="label-input100">Mot de passe</span>
         </div>
 
+        <div class="wrap-input100 validate-input" data-validate="Password is required">
+          <input class="input100" type="password" [(ngModel)]="confirmePass" name="pass">
+          <span class="focus-input100"></span>
+          <span class="label-input100">Confimer le passe</span>
+        </div>
+
 
         <div class="container-login100-form-btn">
-          <button class="login100-form-btn">
+          <button class="login100-form-btn" (click)="registerUser()">
             Se connecter
           </button>
         </div>
